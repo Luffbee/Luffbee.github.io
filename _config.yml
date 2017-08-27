@@ -2,7 +2,7 @@ name: Luffbee
 title: Inside The Eggs
 email: luffbee@sina.com
 markdown: kramdown
-theme: jekyll-theme-slate
+theme: jekyll-theme-minimal
 
 defaults:
   - 
