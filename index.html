@@ -1,13 +1,25 @@
 ---
 layout: default
-title:  Index page
 ---
-<div>
-    <h1>The owner is lazy now...</h1>
-    <ul class="posts">
+<!-- Posts -->
+<ul id="posts">
 
-        {% for post in site.posts %}
-            <li><span>{{ post.date | date_to_string }}</span> - <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
+	{% for post in paginator.posts %}
+
+	<li class="post">
+	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</a></h2>
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> <i>{{ post.date | date_to_string }}</i> </time>
+	<div class="post_excerpt">
+	  	<p>
+		  {% if post.description %}
+		  {{ post.description }}
+		  {% else %}
+		  {{ post.excerpt }}
+		  {% endif %}
+		</p>
+	</div>
+	</li>
+
+    {% endfor %}
+
+</ul>

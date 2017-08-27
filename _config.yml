@@ -1,12 +1,39 @@
-name: Luffbee
+# Site settings
 title: Inside The Egg
-email: luffbee@sina.com
-markdown: kramdown
-theme: jekyll-theme-slate
+description: "Luffbee's blog"
+url: "http://blog.luffbee.com/"
+author:
+  name: "Luffbee"
+  email: "luffbee@sina.com"
+  url: "https://luffbee.com"
 
+# Build settings
+baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
 defaults:
-  - 
+  -
     scope:
       path: ""
+      type: "posts"
     values:
-      layout: default
+      layout: "post"
+
+# Plugins
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Custom variables
+version: "1.0.0"
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
