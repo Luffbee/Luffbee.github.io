@@ -9,7 +9,10 @@ author:
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
-markdown: kramdown
+# markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
 source: .
 destination: ./_site
 permalink: /:title
@@ -29,6 +32,7 @@ defaults:
 gems:
   - jekyll-paginate
   - jekyll-sitemap
+  - redcarpet
 
 # Custom variables
 version: "1.0.0"

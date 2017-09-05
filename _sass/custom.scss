@@ -2,9 +2,35 @@
 
 // -- Put custom style under this point -- //
 
-pre.highlight {
+h3 {
+	font-size: 1.5em;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#container {
+	max-width: 95%;
+}
+
+code {
+	display: block;
 	overflow: auto;
 	tab-size: 4;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
+	padding: 0.5rem 1rem;
+	background-color: #f2f2f2;
+}
+
+table {
+	border-collapse: collapse;
+	margin-top: 0.6667em;
+	margin-bottom: 0.6667em;
+}
+
+table, th, td {
+	padding: 3px;
+	border: 1px solid #ddd;
 }
